@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDM 418 Microinteractions</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="wrapper">
+    <div>
+        <h1>IDM 418 Microinteractions Alpha Description</h1>
+        <p>Casey Lee <br> Glossier Button <br> <a href="https://www.glossier.com/collections/skincare">Link to the component:</a></p>
+    </div>
+    <section class="images-section">
+        <figure>
+            <img class="gif" src="assets/glossier_button_gif.gif" alt="the button in action gif">
+            <figcaption>Gif of Microinteractions</figcaption>
+        </figure>
+        <div class="div-with-figures">
+            <figure>
+                <img src="assets/inactive_state.png" alt="button's inactive state">
+                <figcaption>Inactive State</figcaption>
+            </figure>
+            <figure>
+                <img src="assets/active_state.png" alt="button's active state">
+                <figcaption>Active State</figcaption>
+            </figure>
+        </div>
+    </section>
+    <section>
+        <div>
+            <p><b>Trigger</b></p>
+            <ul>
+                <li>User hovers on and off the button</li>
+            </ul>
+        </div>
+        <div>
+            <p><b>Rules</b></p>
+            <ul>
+                <li>Static stroke switches to a moving dashed stroke</li>
+                <li>The dashes move around the perimeter in a clockwise motion</li>
+                <li>Reverts back to static stroke when no longer hovering</li>
+            </ul>
+        </div>
+        <div>
+            <p><b>Feedback</b></p>
+            <ul>
+                <li>The static, solid stroke disappears</li>
+                <li>The stroke becomes dashed and covers the entire perimeter of the button</li>
+                <li>The stroke moves physically around the button clockwise, to outline the shape</li>
+            </ul>
+        </div>
+        <div>
+            <p><b>Loops and Modes</b></p>
+            <ul>
+                <li>Loop: the dashed stroke animation continues for as long as the user is hovered, and is stopped/reset when the user stops hovering.</li>
+                <li>No modes.</li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
