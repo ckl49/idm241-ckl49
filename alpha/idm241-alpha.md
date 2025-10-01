@@ -24,4 +24,6 @@ Modes: if it introduces new information, like a modal.
 
 ## Style
 306.25 x 40px
-14px Apercu
+14px some sans : Apercu, Gill Sans, sans serif
+#FFFFFF
+padding is 8px 16px
