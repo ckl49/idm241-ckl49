@@ -9,12 +9,15 @@ p, li {
 }
 
 figure {
-    width: 100%;
+    width: fit-content;
     height: auto;
+    margin: 0;
 }
 
 img {
     padding-bottom: 8px;
+    width: 100%;
+    height: auto;
 }
 
 figcaption {
@@ -25,12 +28,30 @@ div > p {
     margin: 0;
 }
 
+button {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-family: 'Manrope';
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-color: #000;
+    border-top: 0;
+    border-left: 0;
+    height: 50%;
+    width: 50%;
+}
+
+button:hover {
+    border: 0.5px dashed #000;
+}
+
 
 .wrapper {
     padding: 0rem 4rem;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    width: fit-content;
 }
 
 .gif {
@@ -43,8 +64,10 @@ div > p {
     flex-direction: row;
     align-items: center;
     padding: 30px;
+    gap: 30px;
     border: 1px solid #676666;
     border-radius: 8px;
+    width: fit-content;
 }
 
 .div-with-figures {
