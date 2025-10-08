@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
+html {
+    width: 100%;
+}
+
 body {
     font-family: 'Manrope';
+    width: 100%;
 }
 
 p, li {
@@ -26,6 +31,13 @@ figcaption {
 
 div {
     padding-bottom: 30px;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    padding-top: 8px;
+    margin-top: 0px;
 }
 
 div > p {
@@ -84,16 +96,31 @@ nav > ul > li  {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     padding: 30px;
-    gap: 30px;
+    gap: 60px;
     border: 1px solid #676666;
     border-radius: 8px;
-    width: fit-content;
+    height: auto;
 }
 
 .div-with-figures {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: fit-content;
     gap: 60px;
+    align-items: center;
+    width: 100%;
+
 }
+
+@media (max-width: 850px) {
+    .images-section {
+      flex-direction: column;
+    }
+
+    .gif {
+        width: 50vw;
+        height: auto;
+    }
+  }
