@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+html {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+body {
+    font-family: 'Manrope';
+    width: 100%;
+}
+
+p, li {
+    line-height: 1.5rem;
+}
+
+figure {
+    width: fit-content;
+    height: auto;
+    margin: 0;
+}
+
+img {
+    padding-bottom: 8px;
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    color: #3f3f3f;
+}
+
+div {
+    padding-bottom: 30px;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    padding-top: 8px;
+    margin-top: 0px;
+}
+
+div > p {
+    margin: 0;
+}
+
+/* button {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-family: 'Manrope';
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-color: #000;
+    border-top: 0;
+    border-left: 0;
+    height: 50%;
+    width: 50%;
+} */
+
+/* button:hover {
+    border: 0.5px dashed #000;
+} */
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul > li  {
+    padding: 6px;
+}
+
+
+.wrapper {
+    padding: 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.gif {
+    width: 25vw;
+    height: auto;
+}
+
+.images-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 60px;
+    border: 1px solid #676666;
+    border-radius: 8px;
+    height: auto;
+}
+
+.div-with-figures {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+.contains-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 60px 0;
+}
+
+@keyframes moveTopBottom {
+    to {
+      background-position: 10px 0, -10px 100%;
+    }
+  }
+  
+  @keyframes moveLeftRight {
+    to {
+      background-position: 0 -10px, 100% 10px;
+    }
+  }
+
+.add-to-cart-btn {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-family: 'Manrope';
+    background-color: #FFFFFF;
+    border: 1px solid #000;
+    border-top: 0;
+    border-left: 0;
+    height: auto;
+    width: 400px;
+    position: relative;
+    display: inline-block;
+    transition: border-color 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.add-to-cart-btn::before,
+.add-to-cart-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    /* border: 0.5px dashed #000; */
+    border-color: transparent;
+}
+
+/* for top and bottom border */
+.add-to-cart-btn::before {
+    background:
+        repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px)
+            top/100% 0.5px no-repeat,
+
+        repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px)
+            bottom/100% 0.5px no-repeat;
+
+        animation: moveTopBottom 1s linear infinite paused;
+}
+
+/* left and right border */
+.add-to-cart-btn::after {
+    background:
+    repeating-linear-gradient(180deg, #000 0 2px, transparent 2px 4px)
+        left/0.5px 100% no-repeat,
+
+    repeating-linear-gradient(180deg, #000 0 2px, transparent 2px 4px)
+        right/0.5px 100% no-repeat;
+
+    animation: moveLeftRight 1s linear infinite paused;
+}
+
+.add-to-cart-btn:hover::before, 
+.add-to-cart-btn:hover::after {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+
+
+@media (max-width: 850px) {
+    .images-section {
+      flex-direction: column;
+    }
+
+    .gif {
+        width: 50vw;
+        height: auto;
+    }
+  }
