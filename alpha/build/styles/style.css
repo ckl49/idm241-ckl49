@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-html {
+* {
     box-sizing: border-box;
+}
+
+html {
     width: 100%;
 }
 
@@ -86,6 +89,7 @@ nav > ul > li  {
     flex-direction: column;
     gap: 30px;
     width: 100%;
+    justify-self: center;
 }
 
 .gif {
