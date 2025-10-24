@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: 'Manrope';
+}
+
+p, li {
+    line-height: 1.5rem;
+}
+
+figure {
+    width: fit-content;
+    height: auto;
+    margin: 0;
+}
+
+img {
+    padding-bottom: 8px;
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    color: #3f3f3f;
+}
+
+div {
+    padding-bottom: 30px;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    padding-top: 8px;
+    margin-top: 0px;
+}
+
+div > p {
+    margin: 12px;
+}
+
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-family: 'Manrope';
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-color: #000;
+    border-top: 0;
+    border-left: 0;
+    height: 50%;
+    width: 50%;
+}
+
+button:hover {
+    border: 0.5px dashed #000;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    margin-bottom: 24px;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul > li  {
+    padding: 6px;
+}
+
+.rule-header {
+    font-size: 24px;
+}
+
+.object-name {
+    font-size: 18px;
+    padding-top: 8px;
+}
+
+.list-header {
+    margin-bottom: 0px;
+    /* margin-top: 24px; */
+}
+
+.wrapper {
+    padding: 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    justify-self: center;
+}
+
+.gif {
+    width: 25vw;
+    height: auto;
+}
+
+.images-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 60px;
+    border: 1px solid #676666;
+    border-radius: 8px;
+    height: auto;
+    background-color: #000;
+}
+
+.div-with-figures {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.images-section > figure > figcaption {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+@media (max-width: 850px) {
+    .images-section {
+      flex-direction: column;
+    }
+
+    .gif {
+        width: 50vw;
+        height: auto;
+    }
+  }
