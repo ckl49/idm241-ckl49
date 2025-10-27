@@ -27,6 +27,8 @@
                 <ul>
                     <li>Hover on</li>
                     <li>Hover off</li>
+                    <li>Mouse down</li>
+                    <li>Mouse up</li>
                 </ul>
 
                 <p class="object-name"><i>Image Slideshow</i></p>
@@ -61,18 +63,28 @@
                     <li>Background reverts back to white</li>
                     <li>Call to action loses underlined text decoration</li>
                 </ul>
+                <p class="list-header">Mouse down</p>
+                <ul>
+                    <li>Animated border becomes a full solid border with a 1.5px width</li>
+                </ul>
+                <p class="list-header">Mouse up</p>
+                <ul>
+                    <li>Reverts back to animated stroke moving around clockwise with a 1.5px width</li>
+                </ul>
 
                 <p class="object-name"><i>Image Slideshow</i></p>
                 <p class="list-header">Hover on</p>
                 <ul>
-                    <li>Images will change after 0.5s seconds when hovering, and will continue through all images in slideshow</li>
-                    <li>Images fade over 0.3s</li>
+                    <li>Immediately switches to the 2nd image with a 0.8s fade</li>
+                    <li>After 1.7s: Switches to the 3rd image with a 0.3s fade</li>
+                    <li>Every 1.7s after that: Continues cycling through images all images until loops back around to 1</li>
                     <li>Mouse cursor becomes pointer</li>
                 </ul>
                 <p class="list-header">Hover off</p>
                 <ul>
                     <li>Animation will stop and return back to the cover photo</li>
                     <li>Pointer cursor becomes mouse</li>
+                    <li>Fade immediately over 0.3s back to Image 1</li>
                 </ul>
 
                 <p class="object-name"><i>Show More Options Button</i></p>
@@ -89,12 +101,12 @@
                 </ul>
                 <p class="list-header">Mouse down</p>
                 <ul>
-                    <li>Dashed moving stroke becomes solid and stops moving</li>
+                    <li>Animated border becomes a full solid border with a 1.5px width</li>
                 </ul>
                 <p class="list-header">Mouse up</p>
                 <ul>
                     <li>Button disappears</li>
-                    <li>Will show more options and make space for them under</li>
+                    <li>Becomes more options and make space for them under</li>
                     <li>Options fade in a down direction over 0.3s</li>
                 </ul>
             </div>
@@ -105,29 +117,39 @@
                 <ul>
                     <li>Static stroke on bottom and right switch to a moving dashed stroke with a 1.5px border width</li>
                     <li>The dashes animate and move around the perimeter in a clockwise motion</li>
-                    <li>Cursor changes from arrow cursor to pointer.</li>
-                    <li>Background becomes a dark gray</li>
-                    <li>Call to action becomes underlined</li>
+                    <li>Cursor changes from arrow cursor to pointer</li>
+                    <li>Background becomes a light gray</li>
+                    <li>Text becomes underlined</li>
                 </ul>
                 <p class="list-header">Hover off</p>
                 <ul>
                     <li>Reverts back to static stroke when no longer hovering</li>
-                    <li>Cursor changes back from pointer to arrow cursor.</li>
+                    <li>Cursor changes back from pointer to arrow cursor</li>
                     <li>Background reverts back to white</li>
                     <li>Call to action loses underlined text decoration</li>
+                </ul>
+                <p class="list-header">Mouse down</p>
+                <ul>
+                    <li>Animated border becomes a full solid border with a 1.5px width</li>
+                </ul>
+                <p class="list-header">Mouse up</p>
+                <ul>
+                    <li>Reverts back to animated stroke moving around clockwise with a 1.5px width</li>
                 </ul>
 
                 <p class="object-name"><i>Image Slideshow</i></p>
                 <p class="list-header">Hover on</p>
                 <ul>
-                    <li>Images will change after 2 seconds when hovering, and will continue through all images in slideshow</li>
-                    <li>Images fade over 0.3s</li>
+                    <li>Immediately switches to the 2nd image with a 0.8s fade</li>
+                    <li>After 1.7s: Switches to the 3rd image with a 0.3s fade</li>
+                    <li>Every 1.7s after that: Continues cycling through images all images until loops back around to 1</li>
                     <li>Mouse cursor becomes pointer</li>
                 </ul>
                 <p class="list-header">Hover off</p>
                 <ul>
                     <li>Animation will stop and return back to the cover photo</li>
                     <li>Pointer cursor becomes mouse</li>
+                    <li>Fade immediately over 0.3s back to Image 1</li>
                 </ul>
 
                 <p class="object-name"><i>Show More Options Button</i></p>
@@ -135,21 +157,21 @@
                 <ul>
                     <li>Static stroke switches to a moving dashed stroke</li>
                     <li>The dashes animate and move around the perimeter in a clockwise motion</li>
-                    <li>Cursor changes from arrow cursor to pointer.</li>
+                    <li>Cursor changes from arrow cursor to pointer</li>
                 </ul>
                 <p class="list-header">Hover off</p>
                 <ul>
                     <li>Reverts back to static stroke when no longer hovering</li>
-                    <li>Cursor changes back from pointer to arrow cursor.</li>
+                    <li>Cursor changes back from pointer to arrow cursor</li>
                 </ul>
                 <p class="list-header">Mouse down</p>
                 <ul>
-                    <li>Dashed moving stroke becomes solid and stops moving</li>
+                    <li>Animated border becomes a full solid border with a 1.5px width</li>
                 </ul>
                 <p class="list-header">Mouse up</p>
                 <ul>
                     <li>Button disappears</li>
-                    <li>Will show more options and make space for them under</li>
+                    <li>Becomes more options and make space for them under</li>
                     <li>Options fade in a down direction over 0.3s</li>
                 </ul>
             </div>
@@ -157,7 +179,7 @@
                 <p class="rule-header"><b>Loops and Modes</b></p>
                 <p class="object-name"><i>Add to Cart Button</i></p>
                 <ul>
-                    <li>Loop: animation continues as long as the user is hovering on. Loop ends when user stops hovering.
+                    <li>Loop: animation continues as long as the user is hovering on. Loop ends when user stops hovering or puts mouse down, but then continues once mouse is up.
                     <li>No modes.</li>
                 </ul>
 
@@ -180,7 +202,7 @@
         </section>
         <section class="images-section">
             <figure>
-                <img class="gif" src="assets/beta-description.gif" alt="product card">
+                <img class="gif" src="assets/figma-prototype.gif" alt="product card">
                 <figcaption>Gif of Product Card, made with Figma</figcaption>
             </figure>
         </section>
