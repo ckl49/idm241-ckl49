@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Build</title>
+    <link rel="stylesheet" href="/beta/styles/styles.css">
+</head>
+<body class="wrapper">
+    <nav>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="/alpha/index.html">Alpha Description</a></li>
+                <li><a href="/alpha/build/index.html">Alpha Build</a></li>
+                <li><a href="/beta/index.html">Beta Description</a></li>
+                <li><a href="/beta/beta-build/index.html">Beta Build</a></li>
+            </ul>
+        </nav>
+    </nav>
+    <main>
+        <div>
+            <h1>Beta Build</h1>
+            <p>Glossier, Add to Cart Button, Image Slideshow, Show More Options Button <br> <a href="https://www.glossier.com/collections/skincare" target="_blank">Link to the component</a></p>
+        </div>
+        <div class="contains-component">
+            <div class="product-card">
+                <img id="card-img" src="/beta/assets/image1.png" alt="product image">
+                <div class="product-info">
+                    <p class="product-name">Balm Dot Com</p>
+                    <p class="product-flavor">Peppermint Bark</p>
+                    <p class="product-price">$16</p>
+                </div>
+                <div class="flavor-options">
+                    <button class="dark-red-color-box" aria-label="Peppermint Bark"></button>
+                    <button class="brown-color-box" aria-label="Espresso"></button>
+                    <button class="beige-color-box" aria-label="Birthday"></button>
+                    <button class="bright-red-color-box" aria-label="Strawberry"></button>
+                    <button class="lime-green-color-box" aria-label="Wild Fig"></button>
+                    <button class="baby-pink-color-box" aria-label="Rose"></button>
+                    <button class="burnt-orange-color-box" aria-label="Coconut"></button>
+                    <button class="mauve-color-box" aria-label="Lavender"></button>
+                    <button class="off-white-color-box" aria-label="Original"></button>
+                    <button id="show-more-options-btn" class="add-to-cart-btn">+</button>
+                    <button class="mint-color-box-more" aria-label="Mint"></button>
+                    <button class="yellow-color-box-more" aria-label="Mango"></button>
+                </div>
+                <button class="add-to-cart-btn">Add to cart</button>
+            </div>
+        </div>
+        <section>
+            <section>
+                <div>
+                    <p class="rule-header"><b>Triggers</b></p>
+                    <p class="object-name"><i>Add to Cart Button</i></p>
+                    <ul>
+                        <li>Hover on</li>
+                        <li>Hover off</li>
+                        <li>Mouse down</li>
+                        <li>Mouse up</li>
+                    </ul>
+                    <p class="object-name"><i>Image Slideshow</i></p>
+                    <ul>
+                        <li>Hover on</li>
+                        <li>Hover off</li>
+                    </ul>
+                    <p class="object-name"><i>Show More Options Button</i></p>
+                    <ul>
+                        <li>Hover on</li>
+                        <li>Hover off</li>
+                        <li>Mouse down</li>
+                        <li>Mouse up</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="rule-header"><b>Rules</b></p>
+                    <p class="object-name"><i>Add to Cart Button</i></p>
+                    <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Static stroke on bottom and right switch to a moving dashed stroke with a 1.5px border width</li>
+                        <li>The dashes animate and move around the perimeter in a clockwise motion</li>
+                        <li>Cursor changes from arrow cursor to pointer</li>
+                        <li>Background becomes light gray</li>
+                        <li>Text becomes underlined</li>
+                    </ul>
+                    <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Reverts back to static stroke when no longer hovering</li>
+                        <li>Cursor changes back from pointer to arrow cursor</li>
+                        <li>Background reverts back to white</li>
+                        <li>Call to action loses underlined text decoration</li>
+                    </ul>
+                    <p class="list-header">Mouse down</p>
+                    <ul>
+                        <li>Animated border becomes a full solid border with a 1.5px width</li>
+                    </ul>
+                    <p class="list-header">Mouse up</p>
+                    <ul>
+                        <li>Reverts back to animated stroke moving around clockwise with a 1.5px width</li>
+                    </ul>
+                    <p class="object-name"><i>Image Slideshow</i></p>
+                    <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Immediately switches to the 2nd image with a 0.8 second fade</li>
+                        <li>After 1.5 seconds: Switches to the 3rd image with a 0.3 second fade</li>
+                        <li>Every 1.5 seconds after that: Continues cycling through images all images until loops back around to 1</li>
+                        <li>Mouse cursor becomes pointer</li>
+                    </ul>
+                    <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Animation will stop and return back to the cover photo</li>
+                        <li>Pointer cursor becomes mouse</li>
+                        <li>Fade immediately over 0.3 second back to Image 1</li>
+                    </ul>
+                    <p class="object-name"><i>Show More Options Button</i></p>
+                    <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Static stroke switches to a moving dashed stroke</li>
+                        <li>The dashes animate and move around the perimeter in a clockwise motion</li>
+                        <li>Cursor changes from arrow cursor to pointer</li>
+                    </ul>
+                    <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Reverts back to static stroke when no longer hovering</li>
+                        <li>Cursor changes back from pointer to arrow cursor</li>
+                    </ul>
+                    <p class="list-header">Mouse down</p>
+                    <ul>
+                        <li>Animated border becomes a full solid border with a 1.5px width</li>
+                    </ul>
+                    <p class="list-header">Mouse up</p>
+                    <ul>
+                        <li>Button disappears</li>
+                        <li>Becomes more options and make space for them under</li>
+                        <li>Options fade in over 0.8 seconds</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="rule-header"><b>Feedback</b></p>
+                    <p class="object-name"><i>Add to Cart Button</i></p>
+                    <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Static stroke on bottom and right switch to a moving dashed stroke with a 1.5px border width</li>
+                        <li>The dashes animate and move around the perimeter in a clockwise motion</li>
+                        <li>Cursor changes from arrow cursor to pointer</li>
+                        <li>Background becomes light gray</li>
+                        <li>Text becomes underlined</li>
+                    </ul>
+                    <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Reverts back to static stroke when no longer hovering</li>
+                        <li>Cursor changes back from pointer to arrow cursor</li>
+                        <li>Background reverts back to white</li>
+                        <li>Call to action loses underlined text decoration</li>
+                    </ul>
+                    <p class="list-header">Mouse down</p>
+                    <ul>
+                        <li>Animated border becomes a full solid border with a 1.5px width</li>
+                    </ul>
+                    <p class="list-header">Mouse up</p>
+                    <ul>
+                        <li>Reverts back to animated stroke moving around clockwise with a 1.5px width</li>
+                    </ul>
+                    <p class="object-name"><i>Image Slideshow</i></p>
+                    <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Immediately switches to the 2nd image with a 0.8 second fade</li>
+                        <li>After 1.5 seconds: Switches to the 3rd image with a 0.3 second fade</li>
+                        <li>Every 1.5 seconds after that: Continues cycling through images all images until loops back around to 1</li>
+                        <li>Mouse cursor becomes pointer</li>
+                    </ul>
+                    <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Animation will stop and return back to the cover photo</li>
+                        <li>Pointer cursor becomes mouse</li>
+                        <li>Fade immediately over 0.3 second back to Image 1</li>
+                    </ul>
+                    <p class="object-name"><i>Show More Options Button</i></p>
+                    <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Static stroke switches to a moving dashed stroke</li>
+                        <li>The dashes animate and move around the perimeter in a clockwise motion</li>
+                        <li>Cursor changes from arrow cursor to pointer</li>
+                    </ul>
+                    <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Reverts back to static stroke when no longer hovering</li>
+                        <li>Cursor changes back from pointer to arrow cursor</li>
+                    </ul>
+                    <p class="list-header">Mouse down</p>
+                    <ul>
+                        <li>Animated border becomes a full solid border with a 1.5px width</li>
+                    </ul>
+                    <p class="list-header">Mouse up</p>
+                    <ul>
+                        <li>Button disappears</li>
+                        <li>Becomes more options and make space for them under</li>
+                        <li>Options fade in over 0.8 seconds</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="rule-header"><b>Loops and Modes</b></p>
+                    <p class="object-name"><i>Add to Cart Button</i></p>
+                    <ul>
+                        <li>Loop: animation continues as long as the user is hovering on. Loop ends when user stops hovering or puts mouse down, but then continues once mouse is up.
+                        <li>No modes.</li>
+                    </ul>
+                    <p class="object-name"><i>Images Slideshow</i></p>
+                    <ul>
+                        <li>Loop: animation continues as long as the user is hovering on. Loop ends when user stops hovering.
+                        <li>No modes.</li>
+                    </ul>
+                    <p class="object-name"><i>Show More Options Button</i></p>
+                    <p class="list-header">Loops</p>
+                    <ul>
+                        <li>Animated dashed line continued to move clockwise until user clicks or hovers off</li>
+                    </ul>
+                    <p class="list-header">Modes</p>
+                    <ul>
+                        <li>Clicking this button will introduce more options, adding 2 more boxes to the products shown</li>
+                        <li>This button disappears at the same time, replaced by the new objects</li>
+                        <li>Introduces two new colored boxes in its place, wrapping around to the next line and extending the size of the frame</li>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
