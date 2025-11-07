@@ -118,7 +118,17 @@ nav > ul > li  {
 
 }
 
+
 @media (max-width: 850px) {
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper {
+        padding: 0rem 2rem;
+    }
+
     .images-section {
       flex-direction: column;
     }
@@ -127,4 +137,5 @@ nav > ul > li  {
         width: 50vw;
         height: auto;
     }
+
   }

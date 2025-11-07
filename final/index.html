@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Description</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body class="wrapper">
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="/alpha/index.html">Alpha Description</a></li>
+            <li><a href="/alpha/build/index.html">Alpha Build</a></li>
+            <li><a href="/beta/index.html">Beta Description</a></li>
+            <li><a href="/beta/build/index.html">Beta Build</a></li>
+            <li><a href="/final/index.html">Final Description</a></li>
+            <li><a href="/final/build/index.html">Final Build</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <h1>Final Description</h1>
+            <p>Glossier, Add to Cart Button, Image Slideshow, Show More Options Button, Heart Button, Flavor Button<br> <a href="https://www.glossier.com/collections/skincare" target="_blank">Link to the component</a></p>
+        </div>
+        <section>
+            <div>
+                <p class="rule-header"><b>Triggers</b></p>
+                <p class="object-name"><i>Add to Cart Button</i></p>
+                <ul>
+                    <li>Hover on</li>
+                    <li>Hover off</li>
+                    <li>Mouse down</li>
+                    <li>Mouse up</li>
+                </ul>
+
+                <p class="object-name"><i>Image Slideshow</i></p>
+                <ul>
+                    <li>Hover on</li>
+                    <li>Hover off</li>
+                </ul>
+
+                <p class="object-name"><i>Show More Options Button</i></p>
+                <ul>
+                    <li>Hover on</li>
+                    <li>Hover off</li>
+                    <li>Mouse down</li>
+                    <li>Mouse up</li>
+                </ul>
+
+                <p class="object-name"><i>Heart Button</i></p>
+                <ul>
+                    <li>Hover on</li>
+                    <li>Hover off</li>
+                    <li>Click</li>
+                </ul>
+
+                <p class="object-name"><i>Flavor Button</i></p>
+                <ul>
+                    <li>Hover on</li>
+                    <li>Hover off</li>
+                    <li>Click</li>
+                </ul>
+            </div>
+            <div>
+                <p class="rule-header"><b>Rules</b></p>
+                <p class="object-name"><i>Add to Cart Button</i></p>
+                <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Static stroke on bottom and right switch to a moving dashed stroke with a 1.5px border width</li>
+                        <li>The dashes animate and move around the perimeter in a clockwise motion</li>
+                        <li>Cursor changes from arrow cursor to pointer</li>
+                        <li>Background becomes light gray</li>
+                        <li>Text becomes underlined</li>
+                    </ul>
+                <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Reverts back to static stroke when no longer hovering</li>
+                        <li>Cursor changes back from pointer to arrow cursor</li>
+                        <li>Background reverts back to white</li>
+                        <li>Call to action loses underlined text decoration</li>
+                    </ul>
+                <p class="list-header">Mouse down</p>
+                    <ul>
+                        <li>Animated border becomes a full solid border with a 1.5px width</li>
+                    </ul>
+                <p class="list-header">Mouse up</p>
+                    <ul>
+                        <li>Reverts back to animated stroke moving around clockwise with a 1.5px width</li>
+                    </ul>
+
+                <p class="object-name"><i>Image Slideshow</i></p>
+                <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Immediately switches to the 2nd image with a 0.8 second fade</li>
+                        <li>After 1.5 seconds: Switches to the 3rd image with a 0.3 second fade</li>
+                        <li>Every 1.5 seconds after that: Continues cycling through images all images until loops back around to 1</li>
+                        <li>Mouse cursor becomes pointer</li>
+                    </ul>
+                <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Animation will stop and return back to the cover photo</li>
+                        <li>Pointer cursor becomes mouse</li>
+                        <li>Fade immediately over 0.3 second back to Image 1</li>
+                    </ul>
+
+                <p class="object-name"><i>Show More Options Button</i></p>
+                <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Static stroke switches to a moving dashed stroke</li>
+                        <li>The dashes animate and move around the perimeter in a clockwise motion</li>
+                        <li>Cursor changes from arrow cursor to pointer</li>
+                    </ul>
+                <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Reverts back to static stroke when no longer hovering</li>
+                        <li>Cursor changes back from pointer to arrow cursor</li>
+                    </ul>
+                <p class="list-header">Mouse down</p>
+                    <ul>
+                        <li>Animated border becomes a full solid border with a 1.5px width</li>
+                    </ul>
+                <p class="list-header">Mouse up</p>
+                    <ul>
+                        <li>Button disappears</li>
+                        <li>Becomes more options and make space for them under</li>
+                        <li>Options fade in over 0.8 seconds</li>
+                    </ul>
+
+                <p class="object-name"><i>Heart Button</i></p>
+                <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Static stroke switches to a 1.5px dashed stroke</li>
+                        <li>Cursor changes to a pointer</li>
+                    </ul>
+                <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Reverts back to a solid 1px stroke </li>
+                        <li>Cursor reverts back from a pointer to arrow but may stay a pointer due to the slideshow behind.</li>
+                    </ul>
+                <p class="list-header">Click</p>
+                    <ul>
+                        <li>Heart icon fills completely in black</li>
+                        <li>If heart icon is currently filled, then revert back to no fill</li>
+                    </ul>
+
+                <p class="object-name"><i>Flavor Button</i></p>
+                <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Applies a black dashed stroke of 1.5px to highlight the perimeter of the box.</li>
+                        <li>If currently active, stroke does not change and stays present as a solid 1.5px black stroke.</li>
+                        <li>Cursor changes to a pointer</li>
+                    </ul>
+                <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Stroke disappears when no longer hovering.</li>
+                        <li>If currently active, solid stroke stays.</li>
+                        <li>Cursor changes back from pointer to arrow cursor</li>
+                    </ul>
+                <p class="list-header">Click</p>
+                    <ul>
+                        <li>If button not currently selected, then apply a solid stroke of 1.5px and black to represent current state.</li>
+                    </ul>
+            </div>
+
+
+            <div>
+                <p class="rule-header"><b>Rules</b></p>
+                <p class="object-name"><i>Add to Cart Button</i></p>
+                <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Static stroke on bottom and right switch to a moving dashed stroke with a 1.5px border width</li>
+                        <li>The dashes animate and move around the perimeter in a clockwise motion</li>
+                        <li>Cursor changes from arrow cursor to pointer</li>
+                        <li>Background becomes light gray</li>
+                        <li>Text becomes underlined</li>
+                    </ul>
+                <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Reverts back to static stroke when no longer hovering</li>
+                        <li>Cursor changes back from pointer to arrow cursor</li>
+                        <li>Background reverts back to white</li>
+                        <li>Call to action loses underlined text decoration</li>
+                    </ul>
+                <p class="list-header">Mouse down</p>
+                    <ul>
+                        <li>Animated border becomes a full solid border with a 1.5px width</li>
+                    </ul>
+                <p class="list-header">Mouse up</p>
+                    <ul>
+                        <li>Reverts back to animated stroke moving around clockwise with a 1.5px width</li>
+                    </ul>
+
+                <p class="object-name"><i>Image Slideshow</i></p>
+                <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Immediately switches to the 2nd image with a 0.8 second fade</li>
+                        <li>After 1.5 seconds: Switches to the 3rd image with a 0.3 second fade</li>
+                        <li>Every 1.5 seconds after that: Continues cycling through images all images until loops back around to 1</li>
+                        <li>Mouse cursor becomes pointer</li>
+                    </ul>
+                <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Animation will stop and return back to the cover photo</li>
+                        <li>Pointer cursor becomes mouse</li>
+                        <li>Fade immediately over 0.3 second back to Image 1</li>
+                    </ul>
+
+                <p class="object-name"><i>Show More Options Button</i></p>
+                <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Static stroke switches to a moving dashed stroke</li>
+                        <li>The dashes animate and move around the perimeter in a clockwise motion</li>
+                        <li>Cursor changes from arrow cursor to pointer</li>
+                    </ul>
+                <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Reverts back to static stroke when no longer hovering</li>
+                        <li>Cursor changes back from pointer to arrow cursor</li>
+                    </ul>
+                <p class="list-header">Mouse down</p>
+                    <ul>
+                        <li>Animated border becomes a full solid border with a 1.5px width</li>
+                    </ul>
+                <p class="list-header">Mouse up</p>
+                    <ul>
+                        <li>Button disappears</li>
+                        <li>Becomes more options and make space for them under</li>
+                        <li>Options fade in over 0.8 seconds</li>
+                    </ul>
+
+                <p class="object-name"><i>Heart Button</i></p>
+                <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Static stroke switches to a 1.5px dashed stroke</li>
+                        <li>Cursor changes to a pointer</li>
+                    </ul>
+                <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Reverts back to a solid 1px stroke </li>
+                        <li>Cursor reverts back from a pointer to arrow but may stay a pointer due to the slideshow behind.</li>
+                    </ul>
+                <p class="list-header">Click</p>
+                    <ul>
+                        <li>Heart icon fills completely in black</li>
+                        <li>If heart icon is currently filled, then revert back to no fill</li>
+                    </ul>
+
+                <p class="object-name"><i>Flavor Button</i></p>
+                <p class="list-header">Hover on</p>
+                    <ul>
+                        <li>Applies a black dashed stroke of 1.5px to highlight the perimeter of the box.</li>
+                        <li>If currently active, stroke does not change and stays present as a solid 1.5px black stroke.</li>
+                        <li>Cursor changes to a pointer</li>
+                    </ul>
+                <p class="list-header">Hover off</p>
+                    <ul>
+                        <li>Stroke disappears when no longer hovering.</li>
+                        <li>If currently active, solid stroke stays.</li>
+                        <li>Cursor changes back from pointer to arrow cursor</li>
+                    </ul>
+                <p class="list-header">Click</p>
+                    <ul>
+                        <li>If button not currently selected, then apply a solid stroke of 1.5px and black to represent current state.</li>
+                    </ul>
+            </div>
+
+
+            <div>
+                <p class="rule-header"><b>Loops and Modes</b></p>
+                <p class="object-name"><i>Add to Cart Button</i></p>
+                <ul>
+                    <li>Loop: animation continues as long as the user is hovering on. Loop ends when user stops hovering or puts mouse down, but then continues once mouse is up.
+                    <li>No modes.</li>
+                </ul>
+
+                <p class="object-name"><i>Images Slideshow</i></p>
+                <ul>
+                    <li>Loop: animation continues as long as the user is hovering on. Loop ends when user stops hovering.
+                    <li>No modes.</li>
+                </ul>
+
+                <p class="object-name"><i>Show More Options Button</i></p>
+                <p class="list-header">Loops</p>
+                <ul>
+                    <li>Animated dashed line continued to move clockwise until user clicks or hovers off</li>
+                </ul>
+                <p class="list-header">Modes</p>
+                <ul>
+                    <li>Clicking this button will introduce more options, adding 2 more boxes to the products shown</li>
+                    <li>This button disappears at the same time, replaced by the new objects</li>
+                    <li>Introduces two new colored boxes in its place, wrapping around to the next line and extending the size of the frame</li>
+                </ul>
+
+                <p class="object-name"><i>Heart Button</i></p>
+                <p class="list-header">Loops</p>
+                <ul>
+                    <li>Loop: animation continues as long as the user is hovering on. Loop ends when user stops hovering.
+                    <li>No modes.</li>
+                </ul>
+
+                <p class="object-name"><i>Flavor Button</i></p>
+                <p class="list-header">Loops</p>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <p class="list-header">Modes</p>
+                <ul>
+                    <li>Clicking this button will change the images and name of the product.</li>
+                    <li>This button also resets the heart icon's active state, being that a new product is being shown.</li>
+                </ul>
+            </div>
+        </section>
+        <section class="images-section">
+            <figure>
+                <img class="gif" src="assets/finaldescription.gif" alt="product card">
+                <figcaption>Gif of Product Card, made with Figma</figcaption>
+            </figure>
+        </section>
+    </main>
+    <footer>
+        <p>Casey Lee IDM241</p>
+    </footer>
+</body>
+</html>

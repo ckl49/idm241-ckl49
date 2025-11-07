@@ -14,17 +14,16 @@ const imgElement = document.getElementById('card-img');
 let currentIndex = 0;
 let slideshowInterval = null;
 
-// Show the first image initially
 imgElement.src = img_array[0];
 
 function startSlideshow() {
   clearInterval(slideshowInterval);
-  
+
   // Fade into image2 on hover
   currentIndex = 1;
   fadeToImage(img_array[currentIndex]);
 
-  // Start cycling through the rest
+  // Start cycling through 
   slideshowInterval = setInterval(() => {
     currentIndex = (currentIndex + 1) % img_array.length;
     fadeToImage(img_array[currentIndex]);
