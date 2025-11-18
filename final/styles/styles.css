@@ -225,11 +225,12 @@ nav > ul > li  {
 }
 
 .add-to-cart-btn:active {
-    border: 1.5px solid black;
+    border: 0.5px solid black;
 }
 
 .product-card {
     display: flex;
+    position: relative;
     flex-direction: column;
     max-width: 400px;
     background-color: white;
@@ -287,12 +288,24 @@ nav > ul > li  {
     aspect-ratio: 1 / 1;     /* keep them square */
     border: none;
     height: 100%;
-    /* cursor: pointer; */
+    cursor: pointer;
     transition: transform 0.2s ease;
+    border: 1.5px solid transparent;
+    box-sizing: border-box;
 }
+
+.flavor-options > button:hover {
+    border: 1.5px dashed #000;
+}
+
+.flavor-options > button.active {
+    border: 2px solid black;
+    opacity: 1;
+  }
 
 .flavor-options > #show-more-options-btn {
     background-color: #DDDDDF;
+    border: none;
 }
 
 .dark-red-color-box {
@@ -428,8 +441,78 @@ nav > ul > li  {
     margin-bottom: 60px;
 }
 
+.heart-btn:hover,
+.heart-btn:focus,
+.heart-btn:active, 
+.heart-btn {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.heart-btn {
+    position: absolute;
+    color: #000;
+    top: 24px;
+    right: 24px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Base SVG styling */
+.heart-svg {
+    width: 26px;
+    height: 26px;
+}
+
+/* Outline path default (empty heart) */
+.heart-outline {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.5px;
+    transition: stroke-dasharray 0.2s ease, stroke 0.2s ease;
+}
+
+/* Fill path hidden by default */
+.heart-fill {
+    fill: #000;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* HOVER WHEN NOT LIKED: dashed outline */
+.heart-btn:hover:not(.liked) .heart-outline {
+    stroke-dasharray: 4 4;    /* dashed */
+    border: none;
+}
+
+/* CLICKED (LIKED) */
+.heart-btn.liked .heart-fill {
+    opacity: 1;               /* fill becomes visible */
+}
+
+.heart-btn.liked .heart-outline {
+    opacity: 0;               /* hide outline when filled */
+}
+
+/* HOVER WHILE LIKED: show dashed outline on top of fill */
+.heart-btn.liked:hover .heart-outline {
+    opacity: 1;
+    stroke: 2px black;
+    stroke-dasharray: 4 4;    /* dashed border */
+}
+
+#heart-btn {
+    width: 30px;
+    height: 30px;
+}
+
 #card-img:hover {
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 
