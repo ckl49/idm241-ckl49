@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: 'Manrope';
+}
+
+p, li {
+    line-height: 1.5rem;
+}
+
+figure {
+    width: fit-content;
+    height: auto;
+    margin: 0;
+}
+
+img {
+    padding-bottom: 8px;
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    color: #3f3f3f;
+}
+
+div {
+    padding-bottom: 30px;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    padding-top: 8px;
+    margin-top: 0px;
+}
+
+div > p {
+    margin: 12px;
+}
+
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-family: 'Manrope';
+    background-color: #FFFFFF;
+    border-width: 1px;
+    border-color: #000;
+    border-top: 0;
+    border-left: 0;
+    height: 50%;
+    width: 50%;
+}
+
+button:hover {
+    border: 0.5px dashed #000;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+ul {
+    margin-bottom: 24px;
+}
+
+nav > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+
+nav > ul > li  {
+    padding: 6px;
+}
+
+.rule-header {
+    font-size: 24px;
+}
+
+.object-name {
+    font-size: 18px;
+    padding-top: 8px;
+}
+
+.list-header {
+    margin-bottom: 0px;
+    /* margin-top: 24px; */
+}
+
+.wrapper {
+    padding: 0rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    justify-self: center;
+}
+
+.gif {
+    width: 25vw;
+    height: auto;
+}
+
+.images-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    gap: 60px;
+    border: 1px solid #676666;
+    border-radius: 8px;
+    height: auto;
+    background-color: #000;
+}
+
+.div-with-figures {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.images-section > figure > figcaption {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+@keyframes moveTopBottom {
+    to {
+      background-position: 10px 0, -10px 100%;
+    }
+  }
+  
+  @keyframes moveLeftRight {
+    to {
+      background-position: 0 -10px, 100% 10px;
+    }
+  }
+
+.add-to-cart-btn {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-family: 'Manrope';
+    background-color: #FFFFFF;
+    border: 1.5px solid #000;
+    border-top: 0;
+    border-left: 0;
+    height: auto;
+    width: 400px;
+    position: relative;
+    display: inline-block;
+    transition: border-color 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.add-to-cart-btn::before,
+.add-to-cart-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.add-to-cart-btn:hover {
+    /* border: 0.5px dashed #000; */
+    border-color: transparent;
+}
+
+/* for top and bottom border */
+.add-to-cart-btn::before {
+    background:
+        repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px)
+            top/100% 1.5px no-repeat,
+
+        repeating-linear-gradient(90deg, #000 0 2px, transparent 2px 4px)
+            bottom/100% 1.5px no-repeat;
+
+        animation: moveTopBottom 1s linear infinite paused;
+}
+
+/* left and right border */
+.add-to-cart-btn::after {
+    background:
+    repeating-linear-gradient(180deg, #000 0 2px, transparent 2px 4px)
+        left/1.5px 100% no-repeat,
+
+    repeating-linear-gradient(180deg, #000 0 2px, transparent 2px 4px)
+        right/1.5px 100% no-repeat;
+
+    animation: moveLeftRight 1s linear infinite paused;
+}
+
+.add-to-cart-btn:hover::before, 
+.add-to-cart-btn:hover::after {
+    opacity: 1;
+    animation-play-state: running;
+}
+
+.add-to-cart-btn:active:before,
+.add-to-cart-btn:active:after {
+    animation-play-state: paused;
+    display: none;
+}
+
+.add-to-cart-btn:active {
+    border: 0.5px solid black;
+}
+
+.product-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    max-width: 400px;
+    background-color: white;
+    padding: 10px;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.product-card > button {
+    width: 100%;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+}
+
+.product-info > p {
+    padding: 0;
+    margin: 0;
+    font-family: 'Manrope';
+}
+
+.product-name, .product-price {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.product-flavor {
+    color: #666;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.flavor-options {
+    display: grid;
+    grid: auto / repeat(10, 1fr);
+    gap: 0px;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    gap: 0;
+    padding: 0;
+}
+
+.flavor-options > button {
+    width: 100%;             /* fill grid cell */
+    aspect-ratio: 1 / 1;     /* keep them square */
+    border: none;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border: 1.5px solid transparent;
+    box-sizing: border-box;
+}
+
+.flavor-options > button:hover {
+    border: 1.5px dashed #000;
+}
+
+.flavor-options > button.active {
+    border: 2px solid black;
+    opacity: 1;
+  }
+
+.flavor-options > #show-more-options-btn {
+    background-color: #DDDDDF;
+    border: none;
+}
+
+.dark-red-color-box {
+    background-color: #9E2335;
+    border: none;
+}
+
+.brown-color-box {
+    background-color: #5D3E31;
+    border: none;
+}
+
+.beige-color-box {
+    background-color: #F1E5C6;
+    border: none;
+}
+
+.bright-red-color-box {
+    background-color: #C9102E;
+    border: none;
+}
+
+.lime-green-color-box {
+    background-color: #BCD34B;
+    border: none;
+}
+
+.baby-pink-color-box {
+    background-color: #F9DDEA;
+    border: none;
+}
+
+.burnt-orange-color-box {
+    background-color: #D46F4A;
+    border: none;
+}
+
+.mauve-color-box {
+    background-color: #BF88B0;
+    border: none;
+}
+
+.off-white-color-box {
+    background-color: #F5F5F5;
+    border: none;
+}
+
+.mint-color-box-more {
+    background-color: #BDE1D8;
+    display: none;
+    opacity: 0;
+    border: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+
+}
+
+.yellow-color-box-more {
+    background-color: #F4C67B;
+    display: none;
+    opacity: 0;
+    border: none;
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+    transform: translateY(10px);
+}
+
+
+/* HOVER STATE */
+
+.dark-red-color-box:hover {
+    background-color: #9E2335;
+    border: none;
+}
+
+.brown-color-box:hover {
+    background-color: #5D3E31;
+    border: none;
+}
+
+.beige-color-box:hover {
+    background-color: #F1E5C6;
+    border: none;
+}
+
+.bright-red-color-box:hover {
+    background-color: #C9102E;
+    border: none;
+}
+
+.lime-green-color-box:hover {
+    background-color: #BCD34B;
+    border: none;
+}
+
+.baby-pink-color-box:hover {
+    background-color: #F9DDEA;
+    border: none;
+}
+
+.burnt-orange-color-box:hover {
+    background-color: #D46F4A;
+    border: none;
+}
+
+.mauve-color-box:hover {
+    background-color: #BF88B0;
+    border: none;
+}
+
+.off-white-color-box:hover {
+    background-color: #F5F5F5;
+    border: none;
+}
+
+.mint-color-box-more:hover {
+    background-color: #BDE1D8;
+    display: none;
+    border: none;
+}
+
+.yellow-color-box-more:hover {
+    background-color: #F4C67B;
+    display: none;
+    border: none;
+}
+
+.contains-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 30px;
+    margin-bottom: 60px;
+}
+
+.heart-btn:hover,
+.heart-btn:focus,
+.heart-btn:active, 
+.heart-btn {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.heart-btn {
+    position: absolute;
+    color: #000;
+    top: 24px;
+    right: 24px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Base SVG styling */
+.heart-svg {
+    width: 26px;
+    height: 26px;
+}
+
+/* Outline path default (empty heart) */
+.heart-outline {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.5px;
+    transition: stroke-dasharray 0.2s ease, stroke 0.2s ease;
+}
+
+/* Fill path hidden by default */
+.heart-fill {
+    fill: #000;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* HOVER WHEN NOT LIKED: dashed outline */
+.heart-btn:hover:not(.liked) .heart-outline {
+    stroke-dasharray: 4 4;    /* dashed */
+    border: none;
+}
+
+/* CLICKED (LIKED) */
+.heart-btn.liked .heart-fill {
+    opacity: 1;               /* fill becomes visible */
+}
+
+.heart-btn.liked .heart-outline {
+    opacity: 0;               /* hide outline when filled */
+}
+
+/* HOVER WHILE LIKED: show dashed outline on top of fill */
+.heart-btn.liked:hover .heart-outline {
+    opacity: 1;
+    stroke: 2px black;
+    stroke-dasharray: 4 4;    /* dashed border */
+}
+
+#heart-btn {
+    width: 30px;
+    height: 30px;
+}
+
+#card-img:hover {
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 850px) {
+    nav > ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wrapper {
+        padding: 0rem 2rem;
+    }
+
+    .images-section {
+      flex-direction: column;
+    }
+
+    .gif {
+        width: 50vw;
+        height: auto;
+    }
+
+  }

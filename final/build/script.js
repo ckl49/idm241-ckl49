@@ -107,7 +107,7 @@ function startSlideshow() {
   slideshowInterval = setInterval(() => {
     currentIndex = (currentIndex + 1) % activeImages.length;
     fadeToImage(activeImages[currentIndex]);
-  }, 1500);
+  }, 1700);
 }
 
 function stopSlideshow() {
@@ -125,18 +125,25 @@ function stopSlideshow() {
 
      imgElement.src = src;
      imgElement.style.opacity = 1;
-   }, 300); // Wait 0.3s before fading back in
+   }, 800); // Wait 0.8s before fading back in
  }
 
- document.querySelectorAll('.color-box').forEach(btn => {
-   btn.addEventListener('click', () => {
-     const setName = btn.dataset.set;
-     activeImages = imageSets[setName];
-     currentIndex = 0;
-     fadeToImage(activeImages[0]);
+ document.querySelectorAll(".color-box").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const setName = btn.dataset.set;
+    const displayName = btn.dataset.name;
+
+    activeImages = imageSets[setName];
+    currentIndex = 0;
+    productNameElement.textContent = displayName;
+    fadeToImage(activeImages[0]);
+
+    setActiveButton(btn);
+
+    // UNFILL HEART WHEN SWITCHING COLORS
+    document.querySelector(".heart-btn").classList.remove("liked");
   });
 });
-
 imgElement.addEventListener('mouseenter', startSlideshow);
 imgElement.addEventListener('mouseleave', stopSlideshow);
 
