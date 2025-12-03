@@ -61,13 +61,13 @@
                     <button class="beige-color-box color-box" aria-label="Birthday" data-set="birthdayCake" data-name="Birthday Cake"></button>
                     <button class="bright-red-color-box color-box" aria-label="Strawberry" data-set="strawberry" data-name="Strawberry"></button>
                     <button class="lime-green-color-box color-box" aria-label="Wild Fig" data-set="fig" data-name="Wild Fig"></button>
-                    <button class="baby-pink-color-box color-box" aria-label="Rose" data-set="rose" data-name="Rose"></button>
-                    <button class="burnt-orange-color-box color-box" aria-label="Coconut" data-set="coconut" data-name="Coconut"></button>
-                    <button class="mauve-color-box color-box" aria-label="Lavender" data-set="lavender" data-name="Lavender"></button>
-                    <button class="off-white-color-box color-box" aria-label="Original" data-set="original" data-name="Original"></button>
+                    <button class="baby-pink-color-box extra color-box" aria-label="Rose" data-set="rose" data-name="Rose"></button>
+                    <button class="burnt-orange-color-box extra color-box" aria-label="Coconut" data-set="coconut" data-name="Coconut"></button>
+                    <button class="mauve-color-box extra color-box" aria-label="Lavender" data-set="lavender" data-name="Lavender"></button>
+                    <button class="off-white-color-box extra color-box" aria-label="Original" data-set="original" data-name="Original"></button>
                     <button id="show-more-options-btn" class="add-to-cart-btn">+</button>
-                    <button class="mint-color-box-more color-box" aria-label="Mint" data-set="mint" data-name="Mint"></button>
-                    <button class="yellow-color-box-more color-box" aria-label="Mango" data-set="mango" data-name="Mango"></button>
+                    <button class="mint-color-box-more extra color-box" aria-label="Mint" data-set="mint" data-name="Mint"></button>
+                    <button class="yellow-color-box-more extra color-box" aria-label="Mango" data-set="mango" data-name="Mango"></button>
                 </div>
                 <button class="add-to-cart-btn">Add to cart</button>
             </div>
@@ -119,32 +119,31 @@
                         <li>Static stroke on bottom and right switch to a moving dashed stroke with a 1.5px border width</li>
                         <li>The dashes animate and move around the perimeter in a clockwise motion</li>
                         <li>Cursor changes from arrow cursor to pointer</li>
-                        <li>Background becomes light gray</li>
-                        <li>Text becomes underlined</li>
                     </ul>
                 <p class="list-header">Hover off</p>
                     <ul>
                         <li>Reverts back to static stroke when no longer hovering</li>
                         <li>Cursor changes back from pointer to arrow cursor</li>
-                        <li>Background reverts back to white</li>
-                        <li>Call to action loses underlined text decoration</li>
                     </ul>
                 <p class="list-header">Mouse down</p>
                     <ul>
-                        <li>Animated border becomes a full solid border with a 1.5px width</li>
+                        <li>Long click transforms animated border into a full solid border with a 1.5px width</li>
+                        <li>Solid border fades in over 0.3 seconds</li>
                     </ul>
                 <p class="list-header">Mouse up</p>
                     <ul>
                         <li>Reverts back to animated stroke moving around clockwise with a 1.5px width</li>
+                        <li>Solid border fades out over 0.3 seconds</li>
                         <li>Item will be updated in database to show in cart</li>
                     </ul>
 
                 <p class="object-name"><i>Image Slideshow</i></p>
                 <p class="list-header">Hover on</p>
                     <ul>
-                        <li>Immediately switches to the 2nd image with a 0.8 second fade</li>
-                        <li>After 1.5 seconds: Switches to the 3rd image with a 0.3 second fade</li>
-                        <li>Every 1.5 seconds after that: Continues cycling through images all images until loops back around to 1</li>
+                        <li>Immediately switches to the 2nd image with a 0.4 second fade</li>
+                        <li>After 1.5 seconds: Switches to the 3rd image with a 0.4 second fade</li>
+                        <li>Every 1.5 seconds after that: Continues cycling through images all images until loops back around to 1st image</li>
+                        <li>In between image changes, fades from opacity 1 to 0, and the next image fades in from opacity 0 to 1</li>
                         <li>Mouse cursor becomes pointer</li>
                     </ul>
                 <p class="list-header">Hover off</p>
@@ -169,11 +168,12 @@
                 <p class="list-header">Mouse down</p>
                     <ul>
                         <li>Animated border becomes a full solid border with a 1.5px width</li>
+                        <li>Dashed border disappears</li>
                     </ul>
                 <p class="list-header">Mouse up</p>
                     <ul>
                         <li>Button disappears</li>
-                        <li>Becomes more options and make space for them under</li>
+                        <li>Triggers more options to be shown in its place, wrapping to the next line as well</li>
                         <li>Options fade in over 0.8 seconds</li>
                     </ul>
 
@@ -193,6 +193,7 @@
                         <li>Heart icon fills completely in black</li>
                         <li>If heart icon is currently filled, then revert back to no fill</li>
                         <li>Database will update to classify the object as favorited</li>
+                        <li>Fill and no-fill fade in/out over 0.4 seconds depending on state</li>
                     </ul>
 
                 <p class="object-name"><i>Flavor Button</i></p>
@@ -211,6 +212,7 @@
                 <p class="list-header">Click</p>
                     <ul>
                         <li>If button not currently selected, then apply a solid stroke of 1.5px and black to represent current state.</li>
+                        <li>Selecting a button changes the current image and flavor name, accessing the database to change the front end</li>
                     </ul>
             </div>
 
@@ -223,31 +225,30 @@
                         <li>Static stroke on bottom and right switch to a moving dashed stroke with a 1.5px border width</li>
                         <li>The dashes animate and move around the perimeter in a clockwise motion</li>
                         <li>Cursor changes from arrow cursor to pointer</li>
-                        <li>Background becomes light gray</li>
-                        <li>Text becomes underlined</li>
                     </ul>
                 <p class="list-header">Hover off</p>
                     <ul>
                         <li>Reverts back to static stroke when no longer hovering</li>
                         <li>Cursor changes back from pointer to arrow cursor</li>
-                        <li>Background reverts back to white</li>
-                        <li>Call to action loses underlined text decoration</li>
                     </ul>
                 <p class="list-header">Mouse down</p>
                     <ul>
-                        <li>Animated border becomes a full solid border with a 1.5px width</li>
+                        <li>Long click transforms animated border into a full solid border with a 1.5px width</li>
+                        <li>Solid border fades in over 0.3 seconds</li>
                     </ul>
                 <p class="list-header">Mouse up</p>
                     <ul>
                         <li>Reverts back to animated stroke moving around clockwise with a 1.5px width</li>
+                        <li>Solid border fades out over 0.3 seconds</li>
                     </ul>
 
                 <p class="object-name"><i>Image Slideshow</i></p>
                 <p class="list-header">Hover on</p>
                     <ul>
-                        <li>Immediately switches to the 2nd image with a 0.8 second fade</li>
-                        <li>After 1.5 seconds: Switches to the 3rd image with a 0.3 second fade</li>
-                        <li>Every 1.5 seconds after that: Continues cycling through images all images until loops back around to 1</li>
+                        <li>Immediately switches to the 2nd image with a 0.4 second fade</li>
+                        <li>After 1.5 seconds: Switches to the 3rd image with a 0.4 second fade</li>
+                        <li>Every 1.5 seconds after that: Continues cycling through images all images until loops back around to 1st image</li>
+                        <li>In between image changes, fades from opacity 1 to 0, and the next image fades in from opacity 0 to 1</li>
                         <li>Mouse cursor becomes pointer</li>
                     </ul>
                 <p class="list-header">Hover off</p>
@@ -272,11 +273,12 @@
                 <p class="list-header">Mouse down</p>
                     <ul>
                         <li>Animated border becomes a full solid border with a 1.5px width</li>
+                        <li>Dashed border disappears</li>
                     </ul>
                 <p class="list-header">Mouse up</p>
                     <ul>
                         <li>Button disappears</li>
-                        <li>Becomes more options and make space for them under</li>
+                        <li>Triggers more options to be shown in its place, wrapping to the next line as well</li>
                         <li>Options fade in over 0.8 seconds</li>
                     </ul>
 
@@ -295,6 +297,7 @@
                     <ul>
                         <li>Heart icon fills completely in black</li>
                         <li>If heart icon is currently filled, then revert back to no fill</li>
+                        <li>Fill and no-fill fade in/out over 0.4 seconds depending on state</li>
                     </ul>
 
                 <p class="object-name"><i>Flavor Button</i></p>
@@ -313,6 +316,7 @@
                 <p class="list-header">Click</p>
                     <ul>
                         <li>If button not currently selected, then apply a solid stroke of 1.5px and black to represent current state.</li>
+                        <li>Selecting a button changes the current image and flavor name</li>
                     </ul>
             </div>
 

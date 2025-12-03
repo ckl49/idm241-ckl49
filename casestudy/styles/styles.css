@@ -17,10 +17,22 @@ p, li {
     line-height: 1.5rem;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 figure {
-    width: fit-content;
+    width: 100%;
     height: auto;
-    margin: 0;
+    margin: 2rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 img {
@@ -75,6 +87,19 @@ ul {
     margin-bottom: 24px;
 }
 
+figcaption {
+    font-weight: 300;
+}
+
+.title {
+    padding-bottom: 1rem;
+}
+
+.caption {
+    font-weight: 300;
+}
+
+
 nav > ul {
     list-style: none;
     display: flex;
@@ -87,6 +112,37 @@ nav > ul > li  {
     padding: 6px;
 }
 
+.videos {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: center;
+    gap: 16px;
+    padding: 1rem 1rem;
+}
+
+.videos > video {
+    width: 33%;
+    height: auto;
+    max-width: 400px;
+}
+
+.hero-img {
+    width: 100%;
+    background-color: black;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0;
+}
+
+.hero-img > img {
+    width: 30vw;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
 .rule-header {
     font-size: 24px;
 }
@@ -528,6 +584,15 @@ nav > ul > li  {
         flex-direction: column;
     }
 
+    .videos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .videos > video {
+        width: 100%; /* optional */
+    }
+
     .wrapper {
         padding: 0rem 2rem;
     }
@@ -540,5 +605,27 @@ nav > ul > li  {
         width: 50vw;
         height: auto;
     }
+
+    .hero-img > img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .hero-img {
+        padding: 1rem 0;
+    }
+
+    .hero {
+        height: auto;
+        width: 100%;
+    }
+
+    figure {
+        margin: 2rem 0;
+    }
+
+    
 
   }

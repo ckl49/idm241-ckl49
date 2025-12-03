@@ -23,7 +23,91 @@
         </ul>
     </nav>
     <main>
-        <h1>Case Study</h1>
+        <section class="hero">
+            <h1 class="title">Case Study</h1>
+            <div class="hero-img" height="500px" width="300px"><img src="assets/hero-img.png" alt="hero image"></div>
+        </section>
+
+        <section>
+            <h2>Overview</h2>
+            <p>For this microinteractions course, I designed a Glossier-style button and expanded it into a full product card using HTML, CSS, and JavaScript. The goal was to create a clean, minimal interaction that reacted smoothly to user input. What began as a single button grew into a multi-state card with flavor selection, image changes, hover animations, an add-to-cart button, and a heart button.</p>
+            <p> <br>Here's a link to their original website : <a href="https://www.glossier.com/collections/skincare" target="_blank">Glossier</a></p>
+        </section>
+        <section>
+            <h2>Problem</h2>
+            <p>I needed to design an interaction that communicated clear feedback and stayed consistent with Glossier’s aesthetic. A static animation was not enough, so I incorporated JavaScript to handle logic, state management, and movement.</p>
+        </section>
+        <section>
+            <h2>Goals</h2>
+            <ul>
+                <li>Build interactive behavior with JavaScript</li>
+                <li>Understand microinteraction rules like triggers, rules, feedback, loops and modes</li>
+                <li>Practice animating and timing in code</li>
+                <li>Manage UI states like flavor selection and image swapping</li>
+                <li>Strengthen DOM manipulation and debugging skills</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Process</h2>
+            <p>I studied Glossier’s UI patterns. Key traits included minimalism, soft transitions, simple color palettes, and subtle hover states. These guided the visual and interaction style. <br><br> </p>
+            <figure>
+                <img src="assets/prototypes.jpg" alt="Prototypes">
+                <figcaption>Designed assets/prototypes in Figma</figcaption>
+            </figure>
+            <p>
+            I first sketched button states, then expanded the idea into a full product card. I also mapped out how each interaction would work and separated what CSS could handle from what required JavaScript.
+            To aid in the development process, I utilized Figma to create prototypes, tinkering around with their new AI prototype builder, Figma Make. This was especially helpful in seeing clearly what I was going to replicate.
+            </p>    
+        </section>
+        <section>
+            <h2>Development</h2>
+            <p>
+                To begin, I wrote in pure HTML and CSS to build out the static elements of the cards. I knew that I could only go so far with just CSS, so I turned to Javascript to aid in event trackers and state changes. 
+                <br><br>
+                Learning JavaScript was the main challenge. Early issues included selecting elements, managing active states, and updating images reliably. I improved the structure by moving repeated logic into functions.</p>
+            <figure>
+                <img src="assets/imagetocode.jpg" alt="associative arrays">
+                <figcaption>
+                    Used associative arrays in Javascript to house all the image URLs, to be accessed when switching flavors. 
+                </figcaption>
+            </figure>
+            <p>
+                A turning point was using an associative array to match flavors to image paths. This kept the code clean and scalable, and ensured that all my data could live somewhere since I wasn't employing a backend or database. This would give functionality to my slideshow. 
+                <br><br>
+                I smoothed transitions, fixed a double-click bug, refined spacing, and adjusted easing to make the interaction feel softer.
+            </p>
+        </section>
+        <section>
+            <h2>Final Features</h2>
+            <ul>
+                <li>Hover transitions</li>
+                <li>Click feedback</li>
+                <li>Flavor selection with image updates</li>
+                <li>Active state styling</li>
+                <li>A microinteraction aligned with a real brand aesthetic</li>
+            </ul>
+            <div class="videos">
+                <video src="assets/slideshow.mov"autoplay>Slideshow of product images</video>
+                <video src="assets/addmoreoptions.mov"autoplay >Add more Options</video>
+                <video src="assets/heart.mov"autoplay >Liking a product</video>
+                
+            </div>
+            <p class="caption">From left to right: Slideshow, Show More Options, Liking a Product</p>
+        </section>
+        <section>
+            <h2>Conclusion</h2>
+            <p>The finished card was responsive and polished, and it became a strong example of how microinteractions support brand identity. It also strengthened my confidence in front-end development and JavaScript. <br><br></p>
+            <p>Key Learnings</p>
+            <ul>
+                <li>JavaScript is essential for meaningful interaction</li>
+                <li>Associative arrays simplify state-based UI logic</li>
+                <li>Debugging is part of the design process</li>
+                <li>Good microinteractions blend design and engineering</li>
+            </ul>
+        </section>
     </main>
+    <footer>
+        <p>Casey Lee, IDM 241</p>
+    </footer>
 </body>
 </html>

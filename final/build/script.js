@@ -88,7 +88,23 @@ const imageSets = {
   ]
 };
 
+
+
+const preloadCache = {};
+
+function preloadImages(imageArray) {
+  imageArray.forEach(src => {
+    if (!preloadCache[src]) {
+      const img = new Image();
+      img.src = src;
+      preloadCache[src] = img;  // image object stored for instant retrieval
+    }
+  });
+}
+
+
 let activeImages = imageSets.peppermintBark;
+preloadImages(activeImages);
 const imgElement = document.getElementById('card-img');
 
 
@@ -116,41 +132,57 @@ function stopSlideshow() {
   fadeToImage(activeImages[0]);
 }
 
- function fadeToImage(src) {
-   imgElement.style.transition = "opacity 0.8s ease";
-   imgElement.style.opacity = 0;
+function fadeToImage(src) {
+  imgElement.style.transition = "opacity 0.4s ease"; // shorter, smoother
+  imgElement.style.opacity = 0;
 
+  requestAnimationFrame(() => {
     setTimeout(() => {
-      console.log("Trying to load:", src)
+      imgElement.src = src;
+      requestAnimationFrame(() => {
+        imgElement.style.opacity = 1;
+      });
+    }, 250); // switch image earlier for more natural fade
+  });
+}
 
-     imgElement.src = src;
-     imgElement.style.opacity = 1;
-   }, 800); // Wait 0.8s before fading back in
- }
-
- document.querySelectorAll(".color-box").forEach(btn => {
+document.querySelectorAll(".color-box").forEach(btn => {
   btn.addEventListener("click", () => {
     const setName = btn.dataset.set;
     const displayName = btn.dataset.name;
 
+    // update set
     activeImages = imageSets[setName];
+
+    // preload NOW
+    preloadImages(activeImages);
+
     currentIndex = 0;
     productNameElement.textContent = displayName;
+
     fadeToImage(activeImages[0]);
 
     setActiveButton(btn);
-
-    // UNFILL HEART WHEN SWITCHING COLORS
     document.querySelector(".heart-btn").classList.remove("liked");
   });
 });
+
 imgElement.addEventListener('mouseenter', startSlideshow);
 imgElement.addEventListener('mouseleave', stopSlideshow);
 
 // handling the show more options
+const flavorOptions = document.querySelector(".flavor-options");
 const showMoreOptionsBtn = document.getElementById('show-more-options-btn')
 const moreOptions1 = document.querySelector('.mint-color-box-more')
 const moreOptions2 = document.querySelector('.yellow-color-box-more')
+
+function showExtrasMobile() {
+  // Add the class that your CSS is waiting for
+  flavorOptions.classList.add("show-extras");
+
+  // Hide the + button
+  showMoreOptionsBtn.style.display = "none";
+}
 
 // this will change the display value of all buttons
 function showMoreOptions() {
@@ -176,6 +208,9 @@ function showMoreOptions() {
   // hide the button
   showMoreOptionsBtn.style.display = "none";
 }
+
+showMoreOptionsBtn.addEventListener("click", showExtrasMobile);
+
 
 showMoreOptionsBtn.addEventListener('click', showMoreOptions);
 

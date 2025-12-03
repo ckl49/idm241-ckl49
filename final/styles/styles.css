@@ -64,7 +64,10 @@ button {
 
 button:hover {
     border: 0.5px dashed #000;
+    transition: ease-in-out 0.3s;
 }
+
+
 
 nav {
     display: flex;
@@ -171,6 +174,9 @@ nav > ul > li  {
     transition: border-color 0.3s;
     cursor: pointer;
     overflow: hidden;
+    transition:
+        border-color 0.4s ease,
+        border-width 0.4s ease;
 }
 
 .add-to-cart-btn::before,
@@ -181,6 +187,7 @@ nav > ul > li  {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.3s;
+
 }
 
 .add-to-cart-btn:hover {
@@ -215,6 +222,7 @@ nav > ul > li  {
 .add-to-cart-btn:hover::before, 
 .add-to-cart-btn:hover::after {
     opacity: 1;
+    animation-delay: 0.3s; /* delay start of motion */
     animation-play-state: running;
 }
 
@@ -222,10 +230,13 @@ nav > ul > li  {
 .add-to-cart-btn:active:after {
     animation-play-state: paused;
     display: none;
+    opacity: 0;   /* fade out instead of removing */
+
 }
 
 .add-to-cart-btn:active {
     border: 0.5px solid black;
+    transition: ease-in-out 0.4s;
 }
 
 .product-card {
@@ -273,14 +284,18 @@ nav > ul > li  {
 }
 
 .flavor-options {
-    display: grid;
-    grid: auto / repeat(10, 1fr);
+    /* display: grid; */
+    /* grid: auto / repeat(10, 1fr); */
     gap: 0px;
     flex-wrap: wrap;
     width: 100%;
     height: auto;
-    gap: 0;
-    padding: 0;
+    /* gap: 0; */
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    /* gap: 4px; */
+
 }
 
 .flavor-options > button {
@@ -296,6 +311,8 @@ nav > ul > li  {
 
 .flavor-options > button:hover {
     border: 1.5px dashed #000;
+    transition: ease-in-out 0.4s;
+
 }
 
 .flavor-options > button.active {
@@ -441,14 +458,14 @@ nav > ul > li  {
     margin-bottom: 60px;
 }
 
-.heart-btn:hover,
+/* .heart-btn:hover,
 .heart-btn:focus,
 .heart-btn:active, 
 .heart-btn {
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
-}
+} */
 
 .heart-btn {
     position: absolute;
@@ -460,6 +477,9 @@ nav > ul > li  {
     padding: 0;
     cursor: pointer;
     z-index: 1000;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 /* Base SVG styling */
@@ -468,34 +488,42 @@ nav > ul > li  {
     height: 26px;
 }
 
-/* Outline path default (empty heart) */
 .heart-outline {
     fill: none;
     stroke: black;
     stroke-width: 1.5px;
-    transition: stroke-dasharray 0.2s ease, stroke 0.2s ease;
+    transition:
+        stroke 0.4s ease-in-out,
+        stroke-dasharray 0.4s ease-in-out,
+        opacity 0.4s ease-in-out;
+        
 }
 
 /* Fill path hidden by default */
 .heart-fill {
     fill: #000;
     opacity: 0;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.4s ease;
 }
 
 /* HOVER WHEN NOT LIKED: dashed outline */
 .heart-btn:hover:not(.liked) .heart-outline {
     stroke-dasharray: 4 4;    /* dashed */
     border: none;
+    opacity: 1;
+    transition: opacity 0.4s ease;
 }
 
 /* CLICKED (LIKED) */
 .heart-btn.liked .heart-fill {
     opacity: 1;               /* fill becomes visible */
+    transition: opacity 0.3s ease-in-out 0.15s; /* delay 150ms */
+
 }
 
 .heart-btn.liked .heart-outline {
     opacity: 0;               /* hide outline when filled */
+    
 }
 
 /* HOVER WHILE LIKED: show dashed outline on top of fill */
@@ -503,6 +531,8 @@ nav > ul > li  {
     opacity: 1;
     stroke: 2px black;
     stroke-dasharray: 4 4;    /* dashed border */
+    transition: opacity 0.3s ease-in-out 0.15s; /* delay 150ms */
+
 }
 
 #heart-btn {
@@ -510,15 +540,22 @@ nav > ul > li  {
     height: 30px;
 }
 
+.product-card img {
+    width: 100%;
+    object-fit: cover;
+    height: 483px;          /* pick the exact height you want */
+    background-color: #fff; /* optional to avoid empty space */
+}
+
 #card-img:hover {
     cursor: pointer;
     box-sizing: border-box;
 }
 
-
-
-
-
+#show-more-options-btn:active {
+    border: 1.5px solid black !important;
+    transition: ease-in-out 0.3s;
+}
 
 
 
@@ -542,3 +579,23 @@ nav > ul > li  {
     }
 
   }
+
+  @media (max-width: 487px) {
+    .flavor-options {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .flavor-options > button {
+        aspect-ratio: 1 / 1;
+    }
+
+        /* hide extra color boxes on mobile */
+    .flavor-options .extra {
+        display: none;
+    }
+
+    /* when mobile version is opened, show extras */
+    .flavor-options.show-extras .extra {
+        display: block;
+    }
+}
